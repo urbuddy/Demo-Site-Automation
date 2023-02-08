@@ -1,0 +1,25 @@
+{
+  "name": "flipkartwithmocha",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "HEADLESS=true RETRIES=1 mocha ./setupAndTeardown/Setup.js --config ./.mocharc.js",
+    "test1": "HEADLESS=false RETRIES=1 mocha ./setupAndTeardown/Setup.js --config ./.mocharc.js",
+    "test2": "npm run test  ./*.test.js ./setupAndTeardown/Teardown.js",
+    "test3": "npm run test1  ./*.test.js ./setupAndTeardown/Teardown.js",
+    "test4": "npm run test -- ./flipkart.test.js ./setupAndTeardown/Teardown.js",
+    "test5": "npm run test1 -- ./flipkart.test.js ./setupAndTeardown/Teardown.js",
+    "test6": "npm run test -- ./demoqa.test.js ./setupAndTeardown/Teardown.js",
+    "test7": "npm run test1 -- ./demoqa.test.js ./setupAndTeardown/Teardown.js"
+    
+  },
+  "dependencies": {
+    "chai": "^4.3.7",
+    "puppeteer": "^19.4.1"
+  },
+  "devDependencies": {
+    "good-mocha-html-reporter": "^2.0.1",
+    "mocha": "^10.2.0",
+    "mocha-simple-html-reporter": "^2.0.0"
+  }
+}
